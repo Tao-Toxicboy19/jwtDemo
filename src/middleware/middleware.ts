@@ -1,5 +1,5 @@
 // middleware.ts
-import express, { Request, Response, NextFunction } from "express";
+import express from "express";
 
 const app = express();
 
