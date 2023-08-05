@@ -40,3 +40,10 @@ package.json
 "start": "ts-node-dev src/index.ts",
 "test": "echo \"Error: no test specified\" && exit 1"
 }
+
+.ENV
+MONGO_USERNAME="Username"
+MONGO_PASSWORD="Password"
+SERVER_PORT=5050
+
+TOKEN_KEY=prayut
