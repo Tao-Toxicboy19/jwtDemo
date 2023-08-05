@@ -28,10 +28,12 @@ yarn add jsonwebtoken
 yarn add @types/jsonwebtoken
 yarn add dotenv
 yarn add @types/dotenv
-yarn add bcryptjs
-yarn add @types/bcryptjs
+yarn add bcrypt
+yarn add @types/bcrypt
 yarn add nodemon
 yarn add @types/nodemon
+yarn add mongoose@latest
+yarn add @types/mongoose@latest --save-dev
 
 package.json
 "scripts": {

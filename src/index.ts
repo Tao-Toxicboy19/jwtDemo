@@ -2,7 +2,11 @@ import express from "express";
 import http from "http";
 import mongoose from "mongoose";
 import { config } from "./config/Database";
-import app from "./app";
+import router from "./routers/router";
+import middleware from "./middleware/middleware";
+
+
+const app = express();
 
 // Connect to Mongo
 mongoose
@@ -11,10 +15,9 @@ mongoose
         console.log(`Connected to MongoDB`);
         const server = http.createServer(app);
 
+        app.use(middleware);
         // Middleware function to handle the /api route
-        app.use("/api", (req, res) => {
-            res.send("Hello from the /api route!");
-        });
+        app.use("/api", router);
 
         const PORT = config.server.port || 2300;
         server.listen(PORT, () => {
